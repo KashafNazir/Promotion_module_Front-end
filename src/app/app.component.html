@@ -1,3 +1,18 @@
-<h1>
-  {{title}}
-</h1>
+<div id="app">
+  <div class="container">
+    <div class="row">
+      <div class="col-xs-12">
+        <a href="#" [routerLink]="['/']">Promotions</a>
+        <a href="#" [routerLink]="['/new-promotion']">Add a new Promotion</a>
+      </div>   
+    </div>
+    <hr>
+    <div class="row">
+      <div class="col-xs-12">
+        <router-outlet>
+        </router-outlet>
+      </div>   
+    </div>
+  </div>
+</div>
+

@@ -1,0 +1,5 @@
+<div class="button btn btn-primary" (click)="onGetPromotions()">Get Promotions</div>
+<hr>
+<!--Thisis selector of single promotion component we wil loop through it and binding promotion [promotion] which refers to promotion property in promotion.component.ts and "promotion" refers to promotions in Promotion.component.html-->
+<app-promotion *ngFor="let promotion of promotions" [promotion]="promotion" (promotionDeleted)="onDeleted($event)"></app-promotion>
+

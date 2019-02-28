@@ -4,17 +4,26 @@ import { FormsModule } from '@angular/forms';
 import { HttpModule } from '@angular/http';
 
 import { AppComponent } from './app.component';
+import { PromotionComponent } from './promotion/promotion.component';
+import { PromotionsComponent } from './promotions/promotions.component';
+import { NewPromotionComponent } from './new-promotion/new-promotion.component';
+import { routing } from "./app.routing";
+import { PromotionService } from './promotion.service';
 
 @NgModule({
   declarations: [
-    AppComponent
+    AppComponent,
+    PromotionComponent,
+    PromotionsComponent,
+    NewPromotionComponent
   ],
   imports: [
     BrowserModule,
     FormsModule,
-    HttpModule
+    HttpModule,
+    routing
   ],
-  providers: [],
+  providers: [PromotionService],
   bootstrap: [AppComponent]
 })
 export class AppModule { }
